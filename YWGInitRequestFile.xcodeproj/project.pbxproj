@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDE567351D4B271B00543C7E /* YWGInitRequestFile.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = BDE567341D4B271B00543C7E /* YWGInitRequestFile.xcscheme */; };
+		BDE567381D4B271B00543C7E /* YWGInitRequestFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE567371D4B271B00543C7E /* YWGInitRequestFile.m */; };
+		BDE567461D4B2A6B00543C7E /* YWGInputRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE567441D4B2A6B00543C7E /* YWGInputRequestController.m */; };
+		BDE567471D4B2A6B00543C7E /* YWGInputRequestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE567451D4B2A6B00543C7E /* YWGInputRequestController.xib */; };
+		BDE5674B1D4B322A00543C7E /* YWGClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5674A1D4B322A00543C7E /* YWGClassInfo.m */; };
+		BDE5674E1D4B39BA00543C7E /* YWGInitRequestFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5674D1D4B39BA00543C7E /* YWGInitRequestFileManager.m */; };
+		BDE567501D4B4A8200543C7E /* DataModelsTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = BDE5674F1D4B4A8200543C7E /* DataModelsTemplate.txt */; };
+		BDE567531D4B4AFD00543C7E /* YWGPbxprojInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE567521D4B4AFD00543C7E /* YWGPbxprojInfo.m */; };
+		BDE5675C1D4C4E6200543C7E /* NSString+Uplower.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5675B1D4C4E6200543C7E /* NSString+Uplower.m */; };
+		BDE567901D4C849200543C7E /* NSString+UrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5678A1D4C849200543C7E /* NSString+UrlEncode.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BDE567301D4B271B00543C7E /* YWGInitRequestFile.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YWGInitRequestFile.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE567341D4B271B00543C7E /* YWGInitRequestFile.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = YWGInitRequestFile.xcscheme; path = YWGInitRequestFile.xcodeproj/xcshareddata/xcschemes/YWGInitRequestFile.xcscheme; sourceTree = SOURCE_ROOT; };
+		BDE567361D4B271B00543C7E /* YWGInitRequestFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWGInitRequestFile.h; sourceTree = "<group>"; };
+		BDE567371D4B271B00543C7E /* YWGInitRequestFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YWGInitRequestFile.m; sourceTree = "<group>"; };
+		BDE567391D4B271B00543C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE567431D4B2A6B00543C7E /* YWGInputRequestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWGInputRequestController.h; sourceTree = "<group>"; };
+		BDE567441D4B2A6B00543C7E /* YWGInputRequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWGInputRequestController.m; sourceTree = "<group>"; };
+		BDE567451D4B2A6B00543C7E /* YWGInputRequestController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWGInputRequestController.xib; sourceTree = "<group>"; };
+		BDE567491D4B322A00543C7E /* YWGClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWGClassInfo.h; sourceTree = "<group>"; };
+		BDE5674A1D4B322A00543C7E /* YWGClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWGClassInfo.m; sourceTree = "<group>"; };
+		BDE5674C1D4B39BA00543C7E /* YWGInitRequestFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWGInitRequestFileManager.h; sourceTree = "<group>"; };
+		BDE5674D1D4B39BA00543C7E /* YWGInitRequestFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWGInitRequestFileManager.m; sourceTree = "<group>"; };
+		BDE5674F1D4B4A8200543C7E /* DataModelsTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataModelsTemplate.txt; sourceTree = "<group>"; };
+		BDE567511D4B4AFD00543C7E /* YWGPbxprojInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWGPbxprojInfo.h; sourceTree = "<group>"; };
+		BDE567521D4B4AFD00543C7E /* YWGPbxprojInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWGPbxprojInfo.m; sourceTree = "<group>"; };
+		BDE5675A1D4C4E6200543C7E /* NSString+Uplower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Uplower.h"; sourceTree = "<group>"; };
+		BDE5675B1D4C4E6200543C7E /* NSString+Uplower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Uplower.m"; sourceTree = "<group>"; };
+		BDE5678A1D4C849200543C7E /* NSString+UrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UrlEncode.m"; sourceTree = "<group>"; };
+		BDE5678B1D4C849200543C7E /* NSString+UrlEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UrlEncode.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		BDE567281D4B271B00543C7E = {
+			isa = PBXGroup;
+			children = (
+				BDE567321D4B271B00543C7E /* YWGInitRequestFile */,
+				BDE567311D4B271B00543C7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDE567311D4B271B00543C7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDE567301D4B271B00543C7E /* YWGInitRequestFile.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDE567321D4B271B00543C7E /* YWGInitRequestFile */ = {
+			isa = PBXGroup;
+			children = (
+				BDE567361D4B271B00543C7E /* YWGInitRequestFile.h */,
+				BDE567371D4B271B00543C7E /* YWGInitRequestFile.m */,
+				BDE5674C1D4B39BA00543C7E /* YWGInitRequestFileManager.h */,
+				BDE5674D1D4B39BA00543C7E /* YWGInitRequestFileManager.m */,
+				BDE5675A1D4C4E6200543C7E /* NSString+Uplower.h */,
+				BDE5675B1D4C4E6200543C7E /* NSString+Uplower.m */,
+				BDE5678A1D4C849200543C7E /* NSString+UrlEncode.m */,
+				BDE5678B1D4C849200543C7E /* NSString+UrlEncode.h */,
+				BDE567481D4B320900543C7E /* Model */,
+				BDE567421D4B2A4C00543C7E /* ViewController */,
+				BDE567391D4B271B00543C7E /* Info.plist */,
+				BDE567331D4B271B00543C7E /* Supporting Files */,
+			);
+			path = YWGInitRequestFile;
+			sourceTree = "<group>";
+		};
+		BDE567331D4B271B00543C7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDE5674F1D4B4A8200543C7E /* DataModelsTemplate.txt */,
+				BDE567341D4B271B00543C7E /* YWGInitRequestFile.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDE567421D4B2A4C00543C7E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BDE567431D4B2A6B00543C7E /* YWGInputRequestController.h */,
+				BDE567441D4B2A6B00543C7E /* YWGInputRequestController.m */,
+				BDE567451D4B2A6B00543C7E /* YWGInputRequestController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		BDE567481D4B320900543C7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDE567491D4B322A00543C7E /* YWGClassInfo.h */,
+				BDE5674A1D4B322A00543C7E /* YWGClassInfo.m */,
+				BDE567511D4B4AFD00543C7E /* YWGPbxprojInfo.h */,
+				BDE567521D4B4AFD00543C7E /* YWGPbxprojInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDE5672F1D4B271B00543C7E /* YWGInitRequestFile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE5673C1D4B271B00543C7E /* Build configuration list for PBXNativeTarget "YWGInitRequestFile" */;
+			buildPhases = (
+				BDE5672D1D4B271B00543C7E /* Sources */,
+				BDE5672E1D4B271B00543C7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YWGInitRequestFile;
+			productName = YWGInitRequestFile;
+			productReference = BDE567301D4B271B00543C7E /* YWGInitRequestFile.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDE567291D4B271B00543C7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = YangWeiguang;
+				TargetAttributes = {
+					BDE5672F1D4B271B00543C7E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BDE5672C1D4B271B00543C7E /* Build configuration list for PBXProject "YWGInitRequestFile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BDE567281D4B271B00543C7E;
+			productRefGroup = BDE567311D4B271B00543C7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDE5672F1D4B271B00543C7E /* YWGInitRequestFile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDE5672E1D4B271B00543C7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE567471D4B2A6B00543C7E /* YWGInputRequestController.xib in Resources */,
+				BDE567501D4B4A8200543C7E /* DataModelsTemplate.txt in Resources */,
+				BDE567351D4B271B00543C7E /* YWGInitRequestFile.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDE5672D1D4B271B00543C7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE567901D4C849200543C7E /* NSString+UrlEncode.m in Sources */,
+				BDE567461D4B2A6B00543C7E /* YWGInputRequestController.m in Sources */,
+				BDE5674E1D4B39BA00543C7E /* YWGInitRequestFileManager.m in Sources */,
+				BDE5674B1D4B322A00543C7E /* YWGClassInfo.m in Sources */,
+				BDE567381D4B271B00543C7E /* YWGInitRequestFile.m in Sources */,
+				BDE5675C1D4C4E6200543C7E /* NSString+Uplower.m in Sources */,
+				BDE567531D4B4AFD00543C7E /* YWGPbxprojInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BDE5673A1D4B271B00543C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BDE5673B1D4B271B00543C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BDE5673D1D4B271B00543C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = YWGInitRequestFile/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YWGInitRequestFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		BDE5673E1D4B271B00543C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = YWGInitRequestFile/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YWGInitRequestFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDE5672C1D4B271B00543C7E /* Build configuration list for PBXProject "YWGInitRequestFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE5673A1D4B271B00543C7E /* Debug */,
+				BDE5673B1D4B271B00543C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE5673C1D4B271B00543C7E /* Build configuration list for PBXNativeTarget "YWGInitRequestFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE5673D1D4B271B00543C7E /* Debug */,
+				BDE5673E1D4B271B00543C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDE567291D4B271B00543C7E /* Project object */;
+}
