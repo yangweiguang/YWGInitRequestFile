@@ -88,28 +88,26 @@
     NSRange range = [path rangeOfString:@"Pods"];
     if (range.location != NSNotFound) {
         path = [path substringToIndex:range.location];
-        NSRange namRange = [filePath rangeOfString:path.lastPathComponent];
-        fPath = [fPath substringToIndex:namRange.location + namRange.length + 1];
-        fPath = [fPath stringByAppendingString:path.lastPathComponent];
+        NSRange namRange = [filePath rangeOfString:path.lastPathComponent options:NSBackwardsSearch];
+        fPath = [fPath substringToIndex:namRange.location + namRange.length];
         fPath = [fPath stringByAppendingString:@"/Expand/Network/"];
     } else {
         range = [path rangeOfString:@"/" options:NSBackwardsSearch];
         path = [path substringToIndex:range.location];
-        NSRange namRange = [filePath rangeOfString:path.lastPathComponent];
-        fPath = [fPath substringToIndex:namRange.location + namRange.length + 1];
-        fPath = [fPath stringByAppendingString:path.lastPathComponent];
+        NSRange namRange = [filePath rangeOfString:path.lastPathComponent options:NSBackwardsSearch];
+        fPath = [fPath substringToIndex:namRange.location + namRange.length];
         fPath = [fPath stringByAppendingString:@"/Expand/Network/"];
     }
     NSString * hPath = [NSString stringWithFormat:@"%@%@.h", fPath, fileName];
     NSURL * writeUrl = [NSURL URLWithString:hPath];
     NSString * originalContent = [NSString stringWithContentsOfURL:writeUrl encoding:NSUTF8StringEncoding error:nil];
-    originalContent = [originalContent stringByReplacingCharactersInRange:NSMakeRange(originalContent.length, 0) withString:[NSString stringWithFormat:@"\n\nextern NSString * %@Url;", self.className]];
+    originalContent = [originalContent stringByReplacingCharactersInRange:NSMakeRange(originalContent.length, 0) withString:[NSString stringWithFormat:@"\nextern NSString * %@Url;\n", self.className]];
     [originalContent writeToURL:writeUrl atomically:YES encoding:NSUTF8StringEncoding error:nil];
 
     NSString * mpath = [NSString stringWithFormat:@"%@%@.m", fPath, fileName];
     NSURL * mwriteUrl = [NSURL URLWithString:mpath];
     NSString * moriginalContent = [NSString stringWithContentsOfURL:mwriteUrl encoding:NSUTF8StringEncoding error:nil];
-    moriginalContent = [moriginalContent stringByReplacingCharactersInRange:NSMakeRange(moriginalContent.length, 0) withString:[NSString stringWithFormat:@"\n\nNSString * %@Url  = @\"%@\";", self.className, self.url]];
+    moriginalContent = [moriginalContent stringByReplacingCharactersInRange:NSMakeRange(moriginalContent.length, 0) withString:[NSString stringWithFormat:@"\nNSString * %@Url = @\"%@\";\n", self.className, self.url]];
     [moriginalContent writeToURL:mwriteUrl atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 

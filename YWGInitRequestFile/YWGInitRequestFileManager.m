@@ -38,17 +38,23 @@
 + (NSString *)parseClassImpContentWithClassInfo:(YWGClassInfo *)classInfo {
     NSMutableString *result = [NSMutableString stringWithString:@""];
     if (classInfo.isModel) {
-        [result appendFormat:@"@implementation %@\n\n@end\n",classInfo.className];
+        [result appendFormat:@"@implementation %@\n\n@end\n",classInfo.modelClassName];
     } else {
-        [result appendFormat:@"@implementation %@\n%@\n@end\n",classInfo.className,[self methodContentOfYTKRequestWithClassInfo:classInfo]];
+        [result appendFormat:@"@implementation %@\n%@\n@end\n",classInfo.className, [self methodContentOfYTKRequestWithClassInfo:classInfo]];
     }
     
     //headerStr
     NSMutableString *headerString = [NSMutableString stringWithString:[self dealHeaderStrWithClassInfo:classInfo type:@"m"]];
     //import
-    [headerString appendString:[NSString stringWithFormat:@"#import \"%@.h\"\n",classInfo.className]];
-    [headerString appendString:@"\n"];
-    [result insertString:headerString atIndex:0];
+    if (classInfo.isModel) {
+        [headerString appendString:[NSString stringWithFormat:@"#import \"%@.h\"\n",classInfo.modelClassName]];
+        [headerString appendString:@"\n"];
+        [result insertString:headerString atIndex:0];
+    } else {
+        [headerString appendString:[NSString stringWithFormat:@"#import \"%@.h\"\n",classInfo.className]];
+        [headerString appendString:@"\n"];
+        [result insertString:headerString atIndex:0];
+    }
     return [result copy];
 }
 
