@@ -47,15 +47,12 @@ static YWGInitRequestFile *sharedPlugin;
         // reference to plugin's bundle, for resource access
         _bundle = bundle;
         // NSApp may be nil if the plugin is loaded from the xcodebuild command line tool
-        if (NSApp && !NSApp.mainMenu) {
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidFinishLaunching:) name:NSApplicationDidFinishLaunchingNotification object:nil];
-        } else {
-            [self initializeAndLog];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(outputResult:) name:YWGResultNotification object:nil];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:NSTextViewDidChangeSelectionNotification object:nil];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:@"IDEEditorDocumentDidChangeNotification" object:nil];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:@"PBXProjectDidOpenNotification" object:nil];
-        }
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidFinishLaunching:) name:NSApplicationDidFinishLaunchingNotification object:nil];
+        [self initializeAndLog];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(outputResult:) name:YWGResultNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:NSTextViewDidChangeSelectionNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:@"IDEEditorDocumentDidChangeNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:@"PBXProjectDidOpenNotification" object:nil];
     }
     return self;
 }
@@ -63,10 +60,6 @@ static YWGInitRequestFile *sharedPlugin;
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(outputResult:) name:YWGResultNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:NSTextViewDidChangeSelectionNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:@"IDEEditorDocumentDidChangeNotification" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationLog:) name:@"PBXProjectDidOpenNotification" object:nil];
     [self initializeAndLog];
 }
 
@@ -127,11 +120,12 @@ static YWGInitRequestFile *sharedPlugin;
     if (!self.currentTextView) return;
     //再添加.m文件的内容
     NSString *urlStr = [NSString stringWithFormat:@"%@m",[self.currentFilePath substringWithRange:NSMakeRange(0, self.currentFilePath.length-1)]] ;
-    NSLog(@"+++++++++%@", urlStr);
     NSURL *writeUrl = [NSURL URLWithString:urlStr];
     //The original content
     NSString *originalContent = [NSString stringWithContentsOfURL:writeUrl encoding:NSUTF8StringEncoding error:nil];
-    
+    NSLog(@"+++++++++%@", urlStr);
+    NSLog(@"+++++++++%@", self.currentTextView.string);
+    NSLog(@"+++++++++%@", originalContent);
     //先添加主类的属性
     if (classInfo.isPageList) {
         NSRange atInsertRange = [self.currentTextView.string rangeOfString:@"@interface"];
@@ -173,6 +167,7 @@ static YWGInitRequestFile *sharedPlugin;
     
     if ([panel runModal] == NSModalResponseOK) {
         NSString *folderPath = [[[panel URLs] objectAtIndex:0] relativePath];
+        NSLog(@"%@", folderPath);
         [classInfo createFileWithFolderPath:folderPath];
         [[NSWorkspace sharedWorkspace] openFile:folderPath];
     }
